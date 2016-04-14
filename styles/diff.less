@@ -34,6 +34,16 @@
 
       &.lineno {
         color: @text-color-subtle;
+
+        &.selectable:hover {
+          color: @text-color-highlight;
+          cursor: pointer;
+        }
+
+        &.selected {
+          background-color: @text-color-info;
+          color: @text-color-highlight;
+        }
       }
     }
   }
