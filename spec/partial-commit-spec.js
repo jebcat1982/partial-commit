@@ -32,15 +32,6 @@ describe('PartialCommit', function() {
 
       return runs(function() {
         expect(workspaceElement.querySelector('.partial-commit')).toExist()
-
-        const partialCommitElement = workspaceElement.querySelector('.partial-commit')
-        const partialCommitPanel = atom.workspace.panelForItem(partialCommitElement)
-
-        expect(partialCommitElement).toExist()
-
-        expect(partialCommitPanel.isVisible()).toBe(true)
-        atom.commands.dispatch(workspaceElement, 'partial-commit:toggle')
-        return expect(partialCommitPanel.isVisible()).toBe(false)
       })
     })
 
